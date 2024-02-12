@@ -6,11 +6,7 @@
 import click
 import pandas as pd
 import altair as alt
-#from altair_saver import save
 import os
-
-# Ensure Altair charts can be saved as PNG
-#alt.renderers.enable('altair_saver', fmts=['png', 'svg'])
 
 # Function to create the directory if it doesn't exist
 def create_dir_if_not_exists(directory):
@@ -43,7 +39,6 @@ def main(input_dir, out_dir):
     )
 
     chart.save(os.path.join(out_dir, 'horse_pops_plot.png'), scale_factor=2.0)
-    #save(chart, os.path.join(out_dir, 'horse_pops_plot.png'))
 
     # Generate table with max, min, and standard deviation of number of horses
     horses_sd = horse_pop.groupby('GEO')['Value'].agg(Std='std').reset_index().rename(columns={'GEO': 'Province'}).sort_values(by='Std', ascending=False)
@@ -62,7 +57,6 @@ def main(input_dir, out_dir):
     )
 
     chart_largest_sd.save(os.path.join(out_dir, 'horse_pops_plot_largest_sd.png'), scale_factor=2.0)
-    #save(chart_largest_sd, os.path.join(out_dir, 'horse_pop_plot_largest_sd.png'))
 
 if __name__ == '__main__':
     main()
