@@ -123,7 +123,7 @@ div.csl-indent {
 <p>We can see from <a href="#fig-horse_pops_plot">Figure&nbsp;1</a> that Ontario, Saskatchewan and Alberta have had the highest horse populations in Canada. All provinces have had a decline in horse populations since 1940. This is likely due to the rebound of the Canadian automotive industry after the Great Depression and the Second World War. An interesting follow-up visualisation would be car sales per year for each Province over the time period visualised above to further support this hypothesis.</p>
 <p>Suppose we were interested in looking in more closely at the province with the highest spread (in terms of standard deviation) of horse populations. We present the standard deviations in <a href="#tbl-horses_sd">Table&nbsp;1</a>.</p>
 <div class="cell" data-execution_count="2">
-<div class="cell-output cell-output-display" data-execution_count="6">
+<div class="cell-output cell-output-display" data-execution_count="18">
 <div id="tbl-horses_sd" class="anchored">
 <table class="table table-sm table-striped small">
 <caption>Table&nbsp;1: Standard deviation of historical (1906-1972) horse populations for each Canadian province.</caption>
@@ -177,14 +177,14 @@ div.csl-indent {
 </div>
 <p>Note that we define standard deviation (of a sample) as</p>
 <p><span class="math display">\[s = \sqrt{\frac{\sum_{i=1}^N (x_i - \overline{x})^2}{N-1} }\]</span></p>
-<p>Additionally, note that in Table 1 we consider the sample standard deviation of the number of horses during the same time span as Figure1.</p>
+<p>Additionally, note that in <a href="#tbl-horses_sd">Table&nbsp;1</a> we consider the sample standard deviation of the number of horses during the same time span as <a href="#fig-horse_pops_plot">Figure&nbsp;1</a>.</p>
 <div id="fig-horse_pop_plot_largest_sd" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><img src="results/horse_pop_plot_largest_sd.png" class="img-fluid figure-img" style="width:60.0%"></p>
+<p><img src="../results/horse_pops_plot_largest_sd.png" class="img-fluid figure-img" style="width:60.0%"></p>
 <figcaption class="figure-caption">Figure&nbsp;2: Horse populations for the province with the largest standard deviation.</figcaption>
 </figure>
 </div>
-<p>In <a href="#fig-horse_pop_plot_largest_sd">Figure&nbsp;2</a> we zoom in and look at the province of <code>{r} largest_sd</code>, which had the largest spread of values in terms of standard deviation.</p>
+<p>In <a href="#fig-horse_pop_plot_largest_sd">Figure&nbsp;2</a> we zoom in and look at the province of <code>{python} largest_sd</code>, which had the largest spread of values in terms of standard deviation.</p>
 </section>
 <section id="references" class="level2 unnumbered">
 
